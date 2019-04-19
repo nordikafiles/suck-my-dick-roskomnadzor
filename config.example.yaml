@@ -1,0 +1,4 @@
+dns: 8.8.8.8
+interface: utun1
+os: mac
+port: 3434
