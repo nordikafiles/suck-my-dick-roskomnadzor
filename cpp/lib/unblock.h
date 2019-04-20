@@ -1,5 +1,4 @@
-#ifndef UNBLOCK_H
-#define UNBLOCK_H
+#pragma once
 
 #include <array>
 #include <cstdio>
@@ -26,6 +25,3 @@ std::vector<std::string> unblock_domain(const std::string& domain) {
     }
     return result;
 }
-
-
-#endif

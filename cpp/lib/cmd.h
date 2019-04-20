@@ -1,5 +1,4 @@
-#ifndef CMD_H
-#define CMD_H
+#pragma once
 
 #include <array>
 #include <cstdio>
@@ -41,5 +40,3 @@ std::string get_route_cmd(const std::string& host, os_type os = MAC,
     }
     return result.str();
 }
-
-#endif

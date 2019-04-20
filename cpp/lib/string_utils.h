@@ -1,5 +1,4 @@
-#ifndef STRING_UTILS_H
-#define STRING_UTILS_H
+#pragma once
 
 #include <sstream>
 #include <string>
@@ -14,5 +13,3 @@ std::vector<std::string> split(const std::string& s) {
         result.push_back(line);
     return result;
 }
-
-#endif

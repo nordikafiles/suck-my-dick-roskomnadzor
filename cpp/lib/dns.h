@@ -1,5 +1,4 @@
-#ifndef DNS_H
-#define DNS_H
+#pragma once
 
 #include <string>
 #include <vector>
@@ -15,5 +14,3 @@ std::vector<std::string> get_ip(const std::string& domain) {
 std::string init_dns() {
     return exec(get_route_cmd("8.8.8.8"));
 }
-
-#endif
