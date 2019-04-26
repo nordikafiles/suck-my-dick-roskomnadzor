@@ -13,13 +13,9 @@
 
 #include "cmd.h"
 #include "dns.h"
+#include "unblock.h"
 
-std::string unblock_ip(const std::string& ip, const std::string& interface = "utun1") {
-    return exec(get_route_cmd(ip, interface));
-}
-
-std::vector<std::string> unblock_domain(const std::string& domain,
-    const std::string& interface = "utun1") {
+std::vector<std::string> direct(const std::string& domain, const std::string& interface = "utun1") {
     std::vector<std::string> result;
     for (auto& ip : get_ip(domain)) {
         result.push_back(unblock_ip(ip, interface));

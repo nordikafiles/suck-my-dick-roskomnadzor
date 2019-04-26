@@ -22,13 +22,14 @@ std::string exec(const char* cmd) {
 }
 
 std::string exec(const std::string& str) {
+    std::cout << "Trying to execute '" << str << "'...\n";
     return exec(str.c_str());
 }
 
 enum os_type { MAC, UBUNTU };
 
-std::string get_route_cmd(const std::string& host, os_type os = MAC,
-    const std::string& interface = "utun1") {
+std::string get_route_cmd(const std::string& host,
+    const std::string& interface = "utun1", os_type os = MAC) {
     std::ostringstream result;
     switch (os) {
         case MAC:
